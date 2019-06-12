@@ -5,7 +5,17 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './room-top-five.component.html',
 })
 export class RoomTopFiveComponent implements OnInit {
+
+    rooms: Array<any>;
+
     constructor() { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.rooms = [
+            { name: 'Calliope' },
+            { name: 'Thalie' },
+            { name: 'Pegase' }
+        ];
+
+    }
 }
