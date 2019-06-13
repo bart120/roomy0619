@@ -7,6 +7,7 @@ import { RoomModule } from './pages/room/room.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { HomeModule } from './pages/home/home.module';
+import { AuthModule } from './pages/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeModule } from './pages/home/home.module';
     MaterialModule,
     RouterModule.forRoot(routes),
     RoomModule,
-    HomeModule
+    HomeModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

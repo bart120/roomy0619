@@ -1,0 +1,13 @@
+<h1>Authentification</h1>
+
+<form class="form" novalidate>
+  <mat-form-field>
+    <input #email type="email" matInput placeholder="Email" (keyup.enter)="password.focus()">
+  </mat-form-field>
+  <mat-form-field>
+    <input #password type="password" matInput placeholder="Mot de passe" (keyup.enter)="login(email.value, $event)">
+  </mat-form-field>
+  <div>
+    <button type="button" mat-button (click)="login(email.value, $event)">Se connecter</button>
+  </div>
+</form>

@@ -17,7 +17,7 @@
   </div>
   <div>
     <ng-container *ngIf="user == null; else log">
-      <a href="" mat-button>
+      <a routerLink="/auth/login" mat-button>
         <mat-icon>locked_out</mat-icon>
         Login
       </a>
