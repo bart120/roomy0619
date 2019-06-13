@@ -12,9 +12,9 @@ export class RoomTopFiveComponent implements OnInit {
 
     ngOnInit(): void {
         this.rooms = [
-            { name: 'Calliope' },
-            { name: 'Thalie' },
-            { name: 'Pegase' }
+            { name: 'Calliope', image: 'Calliope.jpg' },
+            { name: 'Thalie', image: 'Thalie.jpg' },
+            { name: 'Pegase', image: 'Pegase.jpg' }
         ];
 
     }
