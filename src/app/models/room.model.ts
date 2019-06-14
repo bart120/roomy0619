@@ -1,7 +1,7 @@
 export interface Room {
     id?: number;
-    name: string;
+    name?: string;
     price?: number;
     seatCount?: number;
-    image: string;
+    image?: string;
 }

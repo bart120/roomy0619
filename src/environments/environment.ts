@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlRooms: 'http://formation-roomy.inow.fr/api/rooms/'
+  urlRooms: 'http://formation-roomy.inow.fr/api/rooms'
 };
 
 /*

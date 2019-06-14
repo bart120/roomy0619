@@ -4,6 +4,7 @@ import { RoomCreateComponent } from './pages/room/room-create/room-create.compon
 import { HomeComponent } from './pages/home/home/home.component';
 import { NotFoundComponent } from './pages/home/not-found/not-found.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { RoomDetailComponent } from './pages/room/room-detail/room-detail.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -13,7 +14,8 @@ export const routes: Routes = [
     {
         path: 'rooms', children: [
             { path: 'index', component: RoomIndexComponent },
-            { path: 'create', component: RoomCreateComponent }
+            { path: 'create', component: RoomCreateComponent },
+            { path: 'detail/:id', component: RoomDetailComponent }
         ]
     },
 

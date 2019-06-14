@@ -39,4 +39,8 @@ export class RoomService {
     getRooms(): Observable<Array<Room>> {
         return this.http.get<Array<Room>>(environment.urlRooms);
     }
+
+    getRoomById(id: number): Observable<Room> {
+        return this.http.get<Room>(`${environment.urlRooms}/${id}`);
+    }
 }

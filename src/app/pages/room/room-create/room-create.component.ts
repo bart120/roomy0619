@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Room } from 'src/app/models/room.model';
 
 @Component({
   selector: 'app-room-create',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class RoomCreateComponent implements OnInit {
+
+  room: Room = {};
 
   constructor() { }
 
