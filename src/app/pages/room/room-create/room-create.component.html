@@ -1,0 +1,27 @@
+<h1>Ajouter une salle</h1>
+<form [formGroup]="formRoom" class="form" (ngSubmit)="submit()">
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Nom" formControlName="name">
+    <mat-error>Champ obligatoire</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Prix" formControlName="price">
+    <mat-error>Erreur</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Sièges" formControlName="seatCount">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Image" formControlName="image">
+      <mat-option *ngFor="let p of pictures" [value]="p.id">{{p.image}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div>
+    <button mat-button type="submit">Enregistrer</button>
+  </div>
+</form>

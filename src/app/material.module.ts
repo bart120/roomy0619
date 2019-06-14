@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     imports: [
@@ -21,7 +23,9 @@ import { MatTableModule } from '@angular/material/table';
         MatCardModule,
         MatInputModule,
         MatFormFieldModule,
-        MatTableModule
+        MatTableModule,
+        MatSelectModule,
+        MatSnackBarModule
     ],
     exports: [
         BrowserAnimationsModule,
@@ -33,7 +37,9 @@ import { MatTableModule } from '@angular/material/table';
         MatCardModule,
         MatInputModule,
         MatFormFieldModule,
-        MatTableModule
+        MatTableModule,
+        MatSelectModule,
+        MatSnackBarModule
     ]
 })
 export class MaterialModule { }
