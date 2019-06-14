@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomService } from 'src/app/services/room.service';
+import { Room } from 'src/app/models/room.model';
 
 @Component({
   selector: 'app-room-index',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomIndexComponent implements OnInit {
 
-  constructor() { }
+  rooms: Array<Room>;
+  cols: Array<string> = ['toto', 'price', 'action'];
+
+  constructor(private serv: RoomService) { }
 
   ngOnInit() {
+
+    this.serv.getRooms().subscribe(
+      data => this.rooms = data
+    );
   }
 
 }
