@@ -31,10 +31,13 @@ export class RoomCreateComponent implements OnInit {
 
   submit(): void {
     const room: Room = this.formRoom.value as Room;
-    console.log(room);
+    // console.log(room);
     this.serv.saveRoom(room).subscribe(
       data => this.snack.open(`Salle ${data.name} créée avec l'id ${data.id}`, 'OK', { duration: 3000 }),
-      err => this.snack.open(`Erreur ${err}`, 'OK', { duration: 3000 })
+      err => {
+        console.log(err);
+        this.snack.open(`Erreur ${err}`, 'OK', { duration: 3000 });
+      }
     );
   }
 
